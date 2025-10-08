@@ -1,0 +1,656 @@
+/* Reset de estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Para las secciones que queremos que aparezcan */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Efecto de aparición con el scroll usando el selector :not */
+.section:nth-child(even) {
+    animation: slideIn 0.8s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo general para el header */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FDBF42;
+}
+
+/* Estilo para la sección hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    margin-top: 80px;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-text h2 span {
+    color: #FDBF42;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.hero-text button {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: #FDBF42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+    background-color: #e6a732;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Mejoras para la sección about */
+#about {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Mejoras para la sección de servicios */
+#services {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #0d1b2a;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service {
+    background: linear-gradient(135deg, #0d1b2a, #1b3a4b);
+    color: white;
+    width: 350px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FDBF42, #ff6b6b);
+}
+
+.service:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(253, 191, 66, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: #FDBF42;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #FDBF42;
+}
+
+.service p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.service-features {
+    list-style: none;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.service-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.service-features li:before {
+    content: "✓";
+    color: #FDBF42;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Mejoras para la sección de portafolio */
+#work {
+    background-color: #0d1b2a;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#work h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#work > .container > p {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    opacity: 0.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.portfolio-content {
+    padding: 25px;
+    text-align: left;
+}
+
+.portfolio-content h3 {
+    font-size: 1.4rem;
+    color: #0d1b2a;
+    margin-bottom: 10px;
+}
+
+.portfolio-content p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.portfolio-tags span {
+    background: #FDBF42;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.portfolio-link {
+    display: inline-block;
+    color: #0d1b2a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.portfolio-link:hover {
+    color: #FDBF42;
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+    background-color: #0d1b2a;
+    color: white;
+    padding: 50px 0 20px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-info h3 {
+    margin: 30px 0 15px 0;
+    font-size: 1.3rem;
+}
+
+.app-links a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.app-links img {
+    height: 40px;
+    width: auto;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px 30px;
+    background-color: #FDBF42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e6a732;
+}
+
+.contact-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Estilo de pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 20px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #FDBF42;
+}
+
+/* Clase para cuando la sección es visible */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contenedor para las secciones */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image {
+        margin-top: 30px;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+    background: rgba(253, 191, 66, 0.2);
+    transform: translateX(5px);
+    border-color: #FDBF42;
+}
+
+.social-link i {
+    font-size: 1.3rem;
+    width: 25px;
+    text-align: center;
+}
+
+.social-link:nth-child(1) i { color: #25D366; } /* WhatsApp verde */
+.social-link:nth-child(2) i { color: #1877F2; } /* Facebook azul */
+.social-link:nth-child(3) i { color: #E4405F; } /* Instagram rosa */
+
+/* Estilo de pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .container p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+footer ul li a:hover {
+    color: #FDBF42;
+}
+
+/* ===== LIMITE MÁXIMO DE 1200px ===== */
+.container,
+.contact-container,
+.service-container,
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Asegurar que las secciones no se expandan más de 1200px */
+header .container,
+.hero .container,
+#about .container,
+#services .container,
+#work .container,
+#contact .container,
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Para el hero section */
+.hero .container {
+    max-width: 1200px;
+}
+
+/* Para el contacto */
+.contact-section .contact-container {
+    max-width: 1200px;
+}
+
+/* Asegurar que las imágenes no se salgan */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== LIMITE MÁXIMO DE 1200px ===== */
+.ancho {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container,
+.contact-container,
+.service-container,
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ocultar menú hamburguesa en desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* Header normal para desktop */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

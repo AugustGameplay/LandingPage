@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Jared Cano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="movil.css">
+</head>
+<body>
+<header>
+    <div class="container ancho">
+        <h1>DEVJCS</h1>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mi</a></li>
+                <li><a href="#services">Mis servicios</a></li>
+                <li><a href="#work">Portafolio</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section id="home" class="hero section">
+        <div class="container">
+            <div class="hero-text">
+                <h2>Hola, Soy <span>Dev Jared</span></h2>
+                <p>Desarrollador Full Stack</p>
+                <button>Contrátame</button>
+            </div>
+            <div class="hero-image">
+                <img src="img/yo.jpg" alt="Jared Cano - Desarrollador">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Sobre mi</h2>
+            <p>Desarrollador apasionado con experiencia en crear soluciones digitales innovadoras. Me especializo en desarrollo web y móvil con las últimas tecnologías.</p>
+            <img src="img/yo2.jpg" alt="Sobre Jared Cano">
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Mis Servicios</h2>
+            <div class="service-container">
+                <div class="service">
+                    <div class="service-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Desarrollo Frontend</h3>
+                    <p>Creo interfaces modernas y responsivas usando las últimas tecnologías web.</p>
+                    <ul class="service-features">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript ES6+</li>
+                        <li>React & Vue.js</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                
+                <div class="service">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Desarrollo Backend</h3>
+                    <p>Construyo APIs robustas y servidores escalables para tu aplicación.</p>
+                    <ul class="service-features">
+                        <li>Node.js & Express</li>
+                        <li>Bases de datos SQL/NoSQL</li>
+                        <li>APIs REST & GraphQL</li>
+                        <li>Autenticación & Seguridad</li>
+                    </ul>
+                </div>
+                
+                <div class="service">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Aplicaciones Móviles</h3>
+                    <p>Desarrollo apps nativas e híbridas para iOS y Android.</p>
+                    <ul class="service-features">
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>UI/UX Design</li>
+                        <li>Publicación en Stores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="work" class="section">
+    <div class="container">
+        <h2>Mi Portafolio</h2>
+        <p>Algunos de los proyectos en los que he trabajado recientemente</p>
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3>Plataforma E-commerce</h3>
+                    <p>Tienda online completa con carrito de compras, pasarela de pagos y panel administrativo.</p>
+                    <div class="portfolio-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Stripe</span>
+                    </div>
+                    <a href="#" class="portfolio-link">Ver Proyecto →</a>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Task Management App" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3>App de Gestión de Tareas</h3>
+                    <p>Aplicación web para gestión de proyectos con funciones colaborativas en tiempo real.</p>
+                    <div class="portfolio-tags">
+                        <span>Vue.js</span>
+                        <span>Firebase</span>
+                        <span>SCSS</span>
+                        <span>Real-time</span>
+                    </div>
+                    <a href="#" class="portfolio-link">Ver Proyecto →</a>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fitness Mobile App" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3>App de Fitness</h3>
+                    <p>Aplicación móvil para seguimiento de entrenamientos y nutrición con estadísticas personalizadas.</p>
+                    <div class="portfolio-tags">
+                        <span>React Native</span>
+                        <span>Redux</span>
+                        <span>API REST</span>
+                        <span>HealthKit</span>
+                    </div>
+                    <a href="#" class="portfolio-link">Ver Proyecto →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="section contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contacto</h2>
+            <p>Déjame un mensaje e intentaré responderte en 24 horas.</p>
+
+            <h3>Conecta conmigo</h3>
+            <div class="social-links">
+                <a href="https://wa.me/529994350624" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="https://www.facebook.com/jared.canososa" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+                <a href="https://www.instagram.com/jared.cs.13/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo Electrónico..." required>
+                <textarea placeholder="Mensaje..." required></textarea>
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+    </section>
+
+<footer>
+    <div class="container">
+        <p>©2025 JaredCano - Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="https://wa.me/529994350624" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a></li>
+            <li><a href="https://www.facebook.com/jared.canososa" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a></li>
+            <li><a href="https://www.instagram.com/jared.cs.13/" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+    <script>
+    // Intersection Observer mejorado para todos los dispositivos
+    const sections = document.querySelectorAll('.section');
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.1, // Más sensible - se activa con solo 10% visible
+        rootMargin: '0px 0px -50px 0px' // Se activa un poco antes de llegar
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Menú hamburguesa
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mainNav.classList.remove('active');
+            });
+        });
+    }
+</script>
+</body>
+</html>

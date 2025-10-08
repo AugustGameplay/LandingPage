@@ -1,0 +1,256 @@
+/* ===== TABLETS (768px o menos) ===== */
+@media (max-width: 768px) {
+    /* Header y Navegación */
+    header {
+        background-color: #f8f9fa;
+        padding: 15px 0;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        border-bottom: 2px dotted #333;
+        text-align: center;
+    }
+    
+    /* Hero Section */
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+    
+    .hero-image img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    /* Servicios */
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    
+    /* Portafolio */
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contacto */
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .social-link {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+    }
+}
+
+/* ===== MÓVILES (480px o menos) ===== */
+@media (max-width: 480px) {
+    /* Header */
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Hero Section */
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* Servicios */
+    .service {
+        padding: 25px 15px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Portafolio */
+    .portfolio-item {
+        margin: 0 10px;
+    }
+    
+    /* Contacto */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+    }
+    
+    .social-links {
+        flex-direction: column;
+    }
+    
+    .social-link {
+        min-width: auto;
+    }
+    
+    /* Footer */
+    footer ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    footer .container {
+        gap: 15px;
+    }
+}
+
+/* ===== ICONOS REDES SOCIALES ===== */
+.icons_redes {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a i {
+    font-size: 25px;
+}
+
+footer a:hover {
+    color: #FDBF42;
+}
+
+/* ===== MENÚ HAMBURGUESA PARA MÓVILES ===== */
+
+/* Tablet (768px o menos) - Menú normal */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 8px;
+    }
+    
+    /* Ocultar menú hamburguesa en tablet */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Móvil (480px o menos) - Menú hamburguesa */
+@media (max-width: 480px) {
+    /* Mostrar botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #333;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+    
+    /* Ocultar menú por defecto */
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    /* Mostrar menú cuando tenga clase active */
+    nav.active {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-align: left;
+        border-bottom: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        background-color: #f8f9fa;
+        color: #FDBF42;
+    }
+}
